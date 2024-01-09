@@ -1,37 +1,16 @@
 [{
-  "Name": "go",
-  "Description": "Go language support (gofmt and goimports)",
-  "Tags": ["go", "golang"],
-  "Website": "https://github.com/micro-editor/go-plugin",
+  "Name": "dart",
+  "Description": "Dart language support (dart format)",
+  "Tags": ["dart"],
+  "Website": "https://github.com/DerZombiiie/dart-plugin",
   "Versions": [
     {
-      "Version": "2.0.2",
-      "Url": "https://github.com/micro-editor/go-plugin/archive/v2.0.2.zip",
+      "Version": "1.0.0",
+      "Url": "https://github.com/DerZombiiie/dart-plugin/v1.0.0.zip",
       "Require": {
         "micro": ">=2.0.0"
       }
     },
-    {
-      "Version": "2.0.1",
-      "Url": "https://github.com/micro-editor/go-plugin/archive/v2.0.1.zip",
-      "Require": {
-        "micro": ">=2.0.0-1"
-      }
-    },
-    {
-      "Version": "2.0.0",
-      "Url": "https://github.com/micro-editor/go-plugin/archive/v2.0.0.zip",
-      "Require": {
-        "micro": ">=2.0.0-1"
-      }
-    },
-    {
-      "Version": "1.0.1",
-      "Url": "https://github.com/micro-editor/go-plugin/archive/v1.0.1.zip",
-      "Require": {
-        "micro": ">=1.0.3 <2.0.0-1"
-      }
-    }
   ]
 }]
 
