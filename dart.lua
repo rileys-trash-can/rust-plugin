@@ -7,17 +7,17 @@ local buffer = import("micro/buffer")
 
 -- outside init because we want these options to take effect before
 -- buffers are initialized
-config.RegisterCommonOption("dart", "format", true)
+config.RegisterCommonOption("rust", "format", true)
 
 function init()
-    config.MakeCommand("dartfmt", dartfmt, config.NoComplete)
+    config.MakeCommand("rustfmt", dartfmt, config.NoComplete)
 
-    config.AddRuntimeFile("dart", config.RTHelp, "help/dart-plugin.md")
+    config.AddRuntimeFile("rust", config.RTHelp, "help/rust-plugin.md")
 end
 
 function onSave(bp)
     if bp.Buf:FileType() == "dart" then
-		if bp.Buf.Settings["dart.format"] then
+		if bp.Buf.Settings["rust.format"] then
             dartfmt(bp)
         end
     end
@@ -27,7 +27,7 @@ end
 
 function dartfmt(bp)
     bp:Save()
-    local _, err = shell.RunCommand("dart format " .. bp.Buf.Path)
+    local _, err = shell.RunCommand("cargo format " .. bp.Buf.Path)
     if err ~= nil then
         micro.InfoBar():Error(err)
         return
